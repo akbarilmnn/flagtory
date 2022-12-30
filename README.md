@@ -4,7 +4,7 @@
 [![Documentation](https://img.shields.io/docsrs/flagtory/latest)](https://docs.rs/flagtory/latest/flagtory/)
 [![dependency status](https://deps.rs/repo/github/akbarilmnn/flagtory/status.svg)](https://deps.rs/repo/github/akbarilmnn/flagtory)
 
-# Flagger 
+# Flagtory
 
 a simple library to make command line flags.
 This library provides the user to make their own command line flags easily.
