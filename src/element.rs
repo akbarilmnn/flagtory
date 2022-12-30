@@ -1,7 +1,7 @@
 
 use crate::traits::Flag;
 
-/// The structure for the Flag;
+/// The representation of a flag.
 pub struct Element<'a> {
     pub name: &'a str,
     pub description: &'a str,

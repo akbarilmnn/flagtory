@@ -4,7 +4,11 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT"
 description = "a simple library to make command line flags."
-
+readme = "README.md"
+homepage = "https://github.com/akbarilmnn/flagtory"
+repository = "https://github.com/akbarilmnn/flagtory"
+keywords = ["cli"]
+categories = ["command-line-utilities"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
