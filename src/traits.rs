@@ -8,26 +8,27 @@ pub trait Flag {
     fn as_any(&mut self) -> &mut dyn Any;
 }
 
-// the reason why iam not doing an implementation of the trait for each 
-// type that is allowed, is just for convenience
-impl<T> Flag for T 
-    where T: FromStr + 'static
-{
-    fn into_flag(&mut self, s: &str) {
-        if let Ok(parsable_value) = s.parse::<T>() {
-            *self = parsable_value;
-        } else {
-            // alternative error message.
-            // panic!("Cannot parse this type from a String that has the value of `{}`!\nPlease Check your flag type again to be parsable.", s);
-            eprintln!("Cannot parse type `{}` from String that has the value `{}`", std::any::type_name::<T>(), s);
-            eprintln!("Process exited with status 1 -> Failed");
 
-            // exit a running process
-            std::process::exit(1);
-        }
-    }
 
-    fn as_any(&mut self) -> &mut dyn Any {
-        self
+#[macro_export]
+macro_rules! impls {
+    ($($type:ident), *) => {
+        $(
+            impl Flag for $type {
+                fn into_flag(&mut self, s: &str) {
+                    if let Ok(value) = s.parse::<$type>() {
+                        *self = value;
+                    } else {
+                        eprintln!("cannot parse it");
+                    }
+                }
+                fn as_any(&mut self) -> &mut dyn Any {
+                    self
+                }
+            } 
+         )*
     }
 }
+
+
+crate::impls!(u8, u16, u32, u64, u128, usize, i8, i16, i32, i64, i128, isize);

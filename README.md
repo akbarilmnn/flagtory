@@ -2,7 +2,7 @@
 
 [![Crates.io](https://img.shields.io/crates/v/flagtory.svg)](https://crates.io/crates/flagtory)
 [![Documentation](https://img.shields.io/docsrs/flagtory/latest)](https://docs.rs/flagtory/latest/flagtory/)
-
+[![dependency status](https://deps.rs/repo/github/akbarilmnn/flagtory/status.svg)](https://deps.rs/repo/github/akbarilmnn/flagtory)
 # Flagger 
 
 a simple library to make command line flags.
