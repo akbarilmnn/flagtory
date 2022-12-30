@@ -14,7 +14,7 @@ impl<'a> Element<'a> {
             name,
             description,
             value: Box::new(value)
-        }
+        } 
     }
     
     pub fn get<T: 'static>(&mut self) -> *mut T {
