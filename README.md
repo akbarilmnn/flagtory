@@ -3,7 +3,7 @@
 [![Crates.io](https://img.shields.io/crates/v/flagtory.svg)](https://crates.io/crates/flagtory)
 [![Documentation](https://img.shields.io/docsrs/flagtory/latest)](https://docs.rs/flagtory/latest/flagtory/)
 
-# Flagger 
+# Flagtory
 
 a simple library to make command line flags.
 This library provides the user to make their own command line flags easily.
