@@ -33,4 +33,5 @@ This library's API model is inspired by Go's [flag](https://pkg.go.dev/flag) pac
 
 Currently, flagtory only accept values that implements the [std::str::FromStr](https://doc.rust-lang.org/std/str/trait.FromStr.html) and [std::any::Any](https://doc.rust-lang.org/std/any/trait.Any.html) trait. Which is wrapped by the [Flag](https://docs.rs/flagtory/latest/flagtory/trait.Flag.html) trait which is why `&str` is not implemented in the Flag trait, use `String` instead.
 and there are some limitations around how a user can create their own flags which is parsable. See [here](https://docs.rs/flagtory/latest/flagtory/)
+Please use the latest version to get the best experience.
 

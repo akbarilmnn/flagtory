@@ -64,10 +64,10 @@ impl<'a> Flags<'a> {
     /// parses the user argument provided in [`std::env::args`].
     /// Note that this method will find the flags that the user defined and change the value of the
     /// flag based on the argument provided.
-    pub fn parse(&self, provided_arguments: Vec<String>) {
+    pub fn parse(&self) {
         // the reason why i need to slicee it because the first argument is the path to the
         // executable meanwhile the rest is what the user is going to type.
-        // let provided_arguments = &std::env::args().collect::<Vec<String>>()[1..];
+        let provided_arguments = &std::env::args().collect::<Vec<String>>()[1..];
     
     
         // iterate through all the provided_arguments 
